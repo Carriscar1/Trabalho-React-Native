@@ -5,7 +5,7 @@ Como baixar ou clonar o projeto
 Você pode obter o projeto de duas maneiras:
 
 1. Clonando com Git:
-git clone 
+git clone https://github.com/Carriscar1/Trabalho-React-Native
 
 
 2. Baixando o arquivo ZIP:
