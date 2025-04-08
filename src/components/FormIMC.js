@@ -1,4 +1,4 @@
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Text, Button, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
 import IdealWeight from './IdealWeight';
 
@@ -24,9 +24,6 @@ const FormIMC = () => {
         if (valor < 40) return 'você está com obesidade grau 2!';
         return "Você está com Obesidade grau 3!!! (mórbida)";
     }
-
-
-
     return (
         <View style={styles.formContainer}>
             <TextInput
@@ -44,7 +41,6 @@ const FormIMC = () => {
                 onChangeText={setAltura}
             />
             <Button title="Calcular IMC" onPress={calcularIMC} />
-            {imc && <Text>IMC: {imc}</Text>}
 
             {imc && (
   <>
