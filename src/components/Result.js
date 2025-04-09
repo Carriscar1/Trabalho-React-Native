@@ -1,12 +1,14 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 
+//função para obter o resultado
 const Result = ({ imc }) => {
     return (
         <text style={StyleSheet.result}>Seu IMC é: {imc} </text>
     );
 };
 
+// Estilização do resultado
 const styles = StyleSheet.create({
     result: {
         marginTop: 20,

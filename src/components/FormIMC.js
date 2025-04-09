@@ -2,11 +2,13 @@ import { View, TextInput, Text, Button, StyleSheet } from 'react-native';
 import React, { useState } from 'react';
 import IdealWeight from './IdealWeight';
 
+// Componente de formulário para calcular o IMC
 const FormIMC = () => {
     const [peso, setPeso] = useState('');
     const [altura, setAltura] = useState('');
     const [imc, setImc] = useState(null);
 
+// Função para calcular o IMC
     const calcularIMC = () => {
         if (peso && altura) {
             const alturaMetros = parseFloat(altura) / 100;
@@ -15,6 +17,7 @@ const FormIMC = () => {
         }
     };
 
+    // Função para classificar o IMC
     const classificacao = () => {
         const valor = parseFloat(imc);
         if (valor < 18.5) return 'Você está abaixo do peso!';
@@ -24,6 +27,8 @@ const FormIMC = () => {
         if (valor < 40) return 'você está com obesidade grau 2!';
         return "Você está com Obesidade grau 3!!! (mórbida)";
     }
+
+    // Renderiza o formulário
     return (
         <View style={styles.formContainer}>
             <TextInput
@@ -42,6 +47,7 @@ const FormIMC = () => {
             />
             <Button title="Calcular IMC" onPress={calcularIMC} />
 
+            // Exibir resultado
             {imc && (
   <>
     <Text style={styles.result}>IMC: {imc}</Text>
@@ -51,7 +57,8 @@ const FormIMC = () => {
 )}
         </View>
     )};
-
+    
+// Estilização do resultado
 const styles = StyleSheet.create({
     formContainer: {
         backgroundColor: '#f0f0f0',

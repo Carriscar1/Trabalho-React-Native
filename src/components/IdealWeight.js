@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
-
+ 
+//função de peso ideal
 const IdealWeight = ({ altura }) => {
   if (!altura) return null;
 
@@ -7,6 +8,7 @@ const IdealWeight = ({ altura }) => {
   const pesoMin = (18.5 * alturaMetros * alturaMetros).toFixed(2);
   const pesoMax = (24.9 * alturaMetros * alturaMetros).toFixed(2);
 
+//retorna o peso ideal
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
@@ -16,6 +18,7 @@ const IdealWeight = ({ altura }) => {
   );
 };
 
+// Estilização do resultado
 const styles = StyleSheet.create({
   container: {
     marginTop: 8,
